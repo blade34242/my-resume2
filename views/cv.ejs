@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../views/partials/head.html'); %>
+
+  <body>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="card border-0 shadow my-5">
+        <!--Foto -->
+        <div id="photo">
+          <img src="<%=data.picture %>" alt="Foto" />
+        </div>
+        <div id="text-header">
+          <h1><%=data.name %>
+
+            <% if(data.links.length) { %>
+              <div class="contact clearfix">
+               <% for(let link of
+              data.links) { %>
+                
+              <a href="<%=link.link %>" target=" _blank">
+                <img src="<%=link.imagePath %> " id="<%=link.id %>" alt="image"
+              /></a>
+              <% } %> <% } else { %>
+              <div>NO LINKS AVAILABLE</div>
+              <% } %>
+            <br /><span> <%=data.header %> </span></h1>
+        </div>
+        <hr />
+        <div class="card-body p-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2><i class="fa fa-user"></i>About</h2>
+                    <p><%=data.about %></p>
+                    <h2><i class="fa fa-suitcase"></i>Work Experience</h2>
+                    <% if(data.workexperiences.length) { %> <% for(let
+                    workexperience of data.workexperiences) { %>
+                    <div class="job clearfix">
+                      <div class="row">
+                        <div class="details">
+                          <div class="where"></div>
+                          <div class="year"><%=workexperience.date %></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="job-details col-xs-11">
+                          <div class="profession">
+                            <%=workexperience.title %>
+                          </div>
+                          <div class="description">
+                            <%=workexperience.desc %> <%
+                            if(workexperience.highlights.length) { %>
+                            <div class="highlights">Highlights</div>
+                            <ul class="list-group">
+                              <% for(let highlight of workexperience.highlights)
+                              { %>
+                              <li class="list-group-item"><%=highlight%></li>
+                              <% }%>
+                            </ul>
+                            <% }%>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <% } %> <% } else { %>
+                    <div>NO WORKEXPERIENCE AVAILABLE</div>
+                    <% } %>
+                  </div>
+                  <div class="col-md-4">
+
+                  
+
+                    <h2><i class="fa fa-list"></i>Skills</h2>
+                    <% if(data.menus.length) { %> <% for(let menu of data.menus)
+                    { %>
+
+                    <div class="skills clearfix">
+                      <div class="item-skills"><%=menu.title %></div>
+                      <div class="col-sm-offset-1 col-sm-12 clearfix">
+                        <% for(let detail of menu.subentries) { %>
+                        <span class="skill badge"> <%=detail %> </span>
+                        <% } %>
+                      </div>
+                    </div>
+                    <% } %> <% } else { %>
+                    <div>NO menu1 elements AVAILABLE</div>
+                    <% } %>
+
+                    <h2><i class="fa fa-graduation-cap"></i>Education</h2>
+
+                    <% if(data.educations.length) { %> <% for(let education of
+                    data.educations) { %>
+                    <div class="clearfix">
+                      <div class="education">
+                        <div class="year pull-left"><%=education.date %></div>
+                        <div class="description pull-right">
+                          <h4><%=education.desc1 %></h4>
+                          <div class="where"></div>
+                          <p><%=education.desc2 %></p>
+                        </div>
+                      </div>
+                    </div>
+                    <% } %> <% } else { %>
+                    <div>NO Education AVAILABLE</div>
+                    <% } %>
+
+                    <div class="box">
+                      <h2><i class="fa fa-heart"></i>Interests</h2>
+
+                      <% if(data.interests.length) { %> <% for(let interest of
+                      data.interests) { %>
+                      <div class="interests clearfix"></div>
+                      <div class="item-interests"><%=interest.title %></div>
+                      <div class="col-sm-offset-1 col-sm-12 clearfix">
+                        <% if(interest.subentries) { %> <% for(let subentry of
+                        interest.subentries) { %>
+                        <span class="interest badge"> <%=subentry %> </span>
+                        <% } %> <% } %>
+                      </div>
+                      <% } %> <% } else { %>
+                      <div>NO Interests AVAILABLE</div>
+                      <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

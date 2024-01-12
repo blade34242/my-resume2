@@ -1,0 +1,134 @@
+{
+    "picture": "/ress/mountedRess/me.png",
+    "name": "Homer J. Simpson",
+    "header": "Award-winning nuclear safety inspector",
+    "about": "Award-winning nuclear safety inspector with 20 years' experience, plus additional skills as policechief, bartender, astronaut, snowplow driver, sports team mascot, and uhhh, is that a box ofdonuts? MmmmmmDOOOnuts!",
+    "mail": "chunkylover53@aol.com",
+    "interests": [
+        {
+            "title": "Eating",
+            "subentries": [
+                "Donuts",
+                "PIZZA"
+            ]
+        },
+        {
+            "title": "BEER!!"
+
+        }
+    ],
+    "educations": [
+        {
+            "date": "2013 – 2017",
+            "desc1": "Nuclear Power Plant,",
+            "desc2": "Nuclear Power Plant,Nuclear Power Plant,"
+        },
+        {
+            "date": "2011 – 2013",
+            "desc1": "Springfield High School, Springfield, USA",
+            "desc2": "HS Diploma College Prep"
+        }
+    ],
+    "menus": [
+        {
+            "title": "Beer",
+            "subentries": [
+                "Duff Blue Ribbon!",
+                "Duff Holo Beer",
+                "Duff Old Fashioned",
+                "Duff Tinsel",
+                "AngularJS"
+            ]
+        },
+        {
+            "title": "System",
+            "subentries": [
+                "Docker",
+                "Octopus",
+                "Linux",
+                "AWS",
+                "CI",
+                "Synology",
+                "Debian"
+            ]
+
+        },
+        {
+            "title": "Softwares",
+            "subentries": [
+                "Synology",
+                "Nextcloud",
+                "Arris"
+            ]
+        },
+        {
+            "title": "Certificates",
+            "subentries": [
+                "nuclear master",
+                "bartender",
+                "astronaut"
+            ]
+        },
+        {
+            "title": "Langages",
+            "subentries": [
+                "Pyhton",
+                "Javascript",
+                "JAVA",
+                "C/C++/C#"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "imagePath": "/ress/wikipedia.png",
+            "link": "https://it.wikipedia.org/wiki/Homer_Simpson"
+        }
+    ],
+    "workexperiences": [
+        {
+        "date": "1989 to Present",
+        "title": "Springfield Nuclear Power Plant, Springfield, USA",
+        "desc": "Safety Inspector",
+        "highlights": [
+            "Strengthened safety procedures that resulted in 75% fewer accidents on days I was absent.",
+            "Pioneered workplace stress-reduction methods that worked for at least one employee."
+        ]
+    },
+    {
+        "date": "2002 to 2002",
+        "title": "City of Springfield, Springfield, USA ",
+        "desc": "Chief of Police",
+        "highlights": [
+            "Broke up weasel-selling ring",
+            "Secured community support in almost-successful effort to expel organized crime from city."
+        ]
+    },
+    {
+        "date": "2001 to 2001",
+        "title": "Moe's Tavern and Homer's Hunting Club, Springfield, USA ",
+        "desc": "Bartender",
+        "highlights": [
+            "Engaged patrons in witty, whimsical, avuncular dialog covering topics such as the arts,philosophy, politics, and spectator sports.",
+            "Launched remodeling project that led to 100% reduction in clientele (including myself)."
+        ]
+    },
+    {
+        "date": "1994 to 1994",
+        "title": "National Aeronautics and Space Administration (NASA), Cape Canaveral, FL ",
+        "desc": "Astronaut",
+        "highlights": [
+            "Averted in-flight disaster by forcing giant ants out of cockpit during space shuttle mission."
+        ]
+    },
+    {
+        "date": "1992 to 1993",
+        "title": "Mr. Plow, Springfield, USA",
+        "desc": "Owner, Chief Marketing Officer, and Chief Driver for Snow-Plowing Business",
+        "highlights": [
+            "Boosted business 15% by executing late-night TV marketing campaign targeting homeowners who were too wasted to shovel their driveways.",
+            "Deliberated at length before rescuing man trapped beneath mountain avalanche."
+        ]
+    }   
+]
+}

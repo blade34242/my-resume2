@@ -1,0 +1,7 @@
+npm-debug.log
+node_modules
+Dockerfile
+.dockerignore
+logs
+public/examples/cvExampleMe
+images
