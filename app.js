@@ -14,7 +14,7 @@ if (process.env.example == 1) {
 } else if (process.env.example == 2) {
     example = 'cvExample2';
 } else {
-  example = 'cvExample1';
+  example = 'cvExample2';
 }
  
 var source = path.join(rootDir , '/public/examples',example);

@@ -6,10 +6,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">my-resume2</h3>
 
   <p align="center">
-    project_description
+    Do you want to have a resume online you can use that project just mount your data with your pictures.
     <br />
     <a href="https://github.com/blade34242/my-resume2"><strong>Explore the docs »</strong></a>
     <br />
@@ -38,14 +38,12 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage-with-docker">Usage with docker</a></li>
+        <li><a href="#usage-without-docker">Usage without docker</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -56,17 +54,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-homer1]](https://homer.gellert-innovation.com)
-[![Product Name Screen Shot][product-homer2]](https://homer.gellert-innovation.com)
+This is a NodeJS application which exposes a resume. I was searching was inspired from the design of my-resume see acknowledgement section. 
+So I created a new one which 
+
 [![Product Name Screen Shot][product-homer3]](https://homer.gellert-innovation.com)
-[![Product Name Screen Shot][product-homer4]](https://homer.gellert-innovation.com)
 [![Product Name Screen Shot][product-jonathan1]](https://jonathan.gellert-innovation.com)
 [![Product Name Screen Shot][product-jonathan2]](https://jonathan.gellert-innovation.com)
 [![Product Name Screen Shot][product-jonathan3]](https://jonathan.gellert-innovation.com)
 [![Product Name Screen Shot][product-jonathanMobile]](https://jonathan.gellert-innovation.com)
 [![Product Name Screen Shot][product-homerMobile]](https://homer.gellert-innovation.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,22 +71,14 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-![Dynamic JSON Badge](https[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.ejs&label=EJS)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.express&label=Express)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.log4js&label=log4js)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.path&label=path)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.font-awesome&label=font-awesome)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,35 +87,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is a NodeJS application which exposes a resume. I was searching was inspired from the design of my-resume see acknowledgement section. 
-So I created a new one which 
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation without docker
-
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/blade34242/my-resume2.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-<!-- USAGE EXAMPLES -->
 ### Usage with docker
 
 Application is dockerized 
@@ -138,23 +99,47 @@ Application is dockerized
 
 With that snippets you can run some examples
 
-
-    ```sh
+```sh
    docker pull 
-   docker run --name HomerResume8 -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest   
-   docker run --name DevResume8 -p 8003:5555 -e example=2 -d blade34242/my-resume2:latest
-   ```
+   docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest   
+   docker run --name DevResume -p 8003:5555 -e example=2 -d blade34242/my-resume2:latest
+```
+
 
 If you like to start with your own resume
 
-1. Create a folder, copy one of the examples me.json and add your picture with me.jpeg and add background backgound.jpg.
+1. Create a folder, copy one of the examples me.json in <public/examples/cvExample2> and add your picture with me.jpg and add background backgound.jpg.
 
 2. Run and add your mount path
 
-    ```sh
-   docker pull 
-   docker run --name MyResume8 -p 8002:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
+With specific Port
+```sh
+    docker pull blade34242/my-resume2:latest 
+    docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
+```
+
+```sh
+    docker pull blade34242/my-resume2:latest 
+    docker run --name MyResume -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
+```
+
+### Usage without docker
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/blade34242/my-resume2.git
    ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Customize the default examples me.json in <public/examples/cvExample2> and add your picture with me.jpg and add background backgound.jpg.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+/public/examples/cvExample2
+## Usage
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -177,7 +162,7 @@ See the [open issues](https://github.com/blade34242/my-resume2/issues) for a ful
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Don't forget toroject_description give the project a star! Thanks again!
 github_username/repo_name
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -202,12 +187,11 @@ Project Link: [https://github.com/blade34242/my-resume2](https://github.com/blad
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Got my inspiration of ](https://github.com/nouchka/docker-hackmyresume)
+* [Best README Tempalte](https://github.com/othneildrew/Best-README-Template)
+* [Font-Awesome Icons](https://fontawesome.com/icons)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -220,19 +204,3 @@ Project Link: [https://github.com/blade34242/my-resume2](https://github.com/blad
 [product-jonathan2]: images/jonathan2.png
 [product-jonathan3]: images/jonathan3.png
 [product-jonathanMobile]: images/jonathan4.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
