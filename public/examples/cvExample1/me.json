@@ -83,6 +83,30 @@
         {
             "imagePath": "/ress/wikipedia.png",
             "link": "https://it.wikipedia.org/wiki/Homer_Simpson"
+        },
+        {
+            "imagePath": "/ress/mailicon.png",
+            "link": "mailto:test@test.com"
+        },
+        {
+            "imagePath": "/ress/github.png",
+            "link": "https://github.com"
+        },
+        {
+            "imagePath": "/ress/tryhackme_logo_icon_249349.png",
+            "link": "https://tryhackme.com"
+        },
+        {
+            "imagePath": "/ress/docker.png",
+            "link": "https://hub.docker.com"
+        },
+        {
+            "imagePath": "/ress/linkedin.png",
+            "link": "https://ch.linkedin.com"
+        },
+        {
+            "imagePath": "/ress/xing.png",
+            "link": "https://www.xing.com"
         }
     ],
     "workexperiences": [

@@ -69,7 +69,7 @@ So I created a new one which
 
 
 
-### Built With
+### ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.font-awesome&label=font-awesome)Built With
 
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
@@ -77,11 +77,9 @@ So I created a new one which
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.express&label=Express)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.log4js&label=log4js)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.path&label=path)
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.font-awesome&label=font-awesome)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -96,11 +94,15 @@ Application is dockerized
 [![Docker stars](https://img.shields.io/docker/stars/blade34242/my-resume2)](https://hub.docker.com/r/blade34242/my-resume2)
 [![Docker size](https://img.shields.io/docker/image-size/blade34242/my-resume2/latest)](https://hub.docker.com/r/blade34242/my-resume2) 
 
-
-With that snippets you can run some examples
+Pull with
 
 ```sh
-   docker pull 
+    docker pull blade34242/my-resume2:latest 
+```
+
+With that snippets you can run some examples, same from demo
+
+```sh
    docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest   
    docker run --name DevResume -p 8003:5555 -e example=2 -d blade34242/my-resume2:latest
 ```
@@ -108,20 +110,22 @@ With that snippets you can run some examples
 
 If you like to start with your own resume
 
-1. Create a folder, copy one of the examples me.json in <public/examples/cvExample2> and add your picture with me.jpg and add background backgound.jpg.
+1. Create a folder, copy one of the examples me.json in <public/examples/cvExample2> and add your picture with me.jpg and background to thi
 
 2. Run and add your mount path
 
 With specific Port
 ```sh
-    docker pull blade34242/my-resume2:latest 
     docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
 ```
 
 ```sh
-    docker pull blade34242/my-resume2:latest 
     docker run --name MyResume -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
 ```
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Usage without docker
 
@@ -134,11 +138,7 @@ With specific Port
    ```sh
    npm install
    ```
-3. Customize the default examples me.json in <public/examples/cvExample2> and add your picture with me.jpg and add background backgound.jpg.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-/public/examples/cvExample2
-## Usage
+3. Customize the default examples me.json in <public/ress/mountedRess> with adding your picture with me.jpg and add background backgound.jpg.
 
 
 
@@ -196,7 +196,8 @@ Project Link: [https://github.com/blade34242/my-resume2](https://github.com/blad
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-homerMobile]: images/homerMobile.png   
+[product-homerMobile]: 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>images/homerMobile.png   
 [product-homer1]: images/homer1.png
 [product-homer2]: images/homer2.png
 [product-homer3]: images/homer3.png

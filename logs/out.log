@@ -1,0 +1,8 @@
+[2024-01-17T13:50:00.426] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T13:50:43.320] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T13:50:53.852] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T13:51:22.304] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T13:52:39.723] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T14:01:56.978] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 200 12790 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T14:12:17.572] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+[2024-01-17T14:15:54.285] [INFO] default - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
