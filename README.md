@@ -58,20 +58,18 @@ This is a NodeJS application which exposes a resume. I was searching was inspire
 So I created a new one which 
 
 [![Product Name Screen Shot][product-homer3]](https://homer.gellert-innovation.com)
-[![Product Name Screen Shot][product-jonathan1]](https://jonathan.gellert-innovation.com)
-[![Product Name Screen Shot][product-jonathan2]](https://jonathan.gellert-innovation.com)
-[![Product Name Screen Shot][product-jonathan3]](https://jonathan.gellert-innovation.com)
-[![Product Name Screen Shot][product-jonathanMobile]](https://jonathan.gellert-innovation.com)
-[![Product Name Screen Shot][product-homerMobile]](https://homer.gellert-innovation.com)
-
+[![Product Name Screen Shot2][product-jonathan1]](https://jonathan.gellert-innovation.com)
+[![Product Name Screen Shot3][product-jonathan2]](https://jonathan.gellert-innovation.com)
+[![Product Name Screen Shot4][product-jonathan3]](https://jonathan.gellert-innovation.com)
+[![Product Name Screen Shot5][product-jonathanMobile]](https://jonathan.gellert-innovation.com)
+[![Product Name Screen Shot6][product-homerMobile]](https://homer.gellert-innovation.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.font-awesome&label=font-awesome)Built With
+### Built With
 
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.bootstrap&label=Bootstrap)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.ejs&label=EJS)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.express&label=Express)
@@ -124,7 +122,7 @@ With specific Port
 ```
 
 Add your own icons put the icon in the mounted folder and add some like this into me.json file
-``json
+```json
         "links": [
         {
 
@@ -206,10 +204,7 @@ Project Link: [https://github.com/blade34242/my-resume2](https://github.com/blad
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-homerMobile]: 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>images/homerMobile.png   
+<!-- MARKDOWN LINKS & IMAGES -->  
 [product-homer1]: images/homer1.png
 [product-homer2]: images/homer2.png
 [product-homer3]: images/homer3.png
