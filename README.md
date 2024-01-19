@@ -123,6 +123,15 @@ With specific Port
     docker run --name MyResume -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
 ```
 
+Add your own icons put the icon in the mounted folder and add some like this into me.json file
+``json
+        {
+            "imagePath": "/ress/mountedRess/<YOUR_PICTURE>",
+            "link": "<YOUR_LINK>"
+        },
+```
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
