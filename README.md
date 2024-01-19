@@ -125,10 +125,13 @@ With specific Port
 
 Add your own icons put the icon in the mounted folder and add some like this into me.json file
 ``json
+        "links": [
         {
+
             "imagePath": "/ress/mountedRess/<YOUR_PICTURE>",
             "link": "<YOUR_LINK>"
-        },
+        }
+        ]
 ```
 
 
