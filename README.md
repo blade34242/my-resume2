@@ -145,10 +145,9 @@ docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/
 <!-- CHANGELOG -->
 ## Changelog
 
-### v3.4 - New Features
+###  3.4 - New Features
 - Added new config enableTestimonials and showTestimonialsInMain
 - Option to display testimonials in main content or under interests
-- Enhanced logging with log4js
 
 ### v3.3 - New Features
 - Enhanced logging with log4js
