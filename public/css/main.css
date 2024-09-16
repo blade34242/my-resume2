@@ -1,83 +1,89 @@
 body {
-    background: url('../ress/mountedRess/background.jpeg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
-  #photo {
-    text-align: center;
-  }
-
-  #text-header {
-    text-align: center;
-  }
-
-  .contact-item-icon {
-    padding-right: 15px;
-  }
-
-  .job .clearfix {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .job .details {
-    width: 99%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #eee;
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-  }
-
-  .job .profession {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-
-  .job .highlights {
-    padding: 5px 0;
-    font-weight: bold;
-  }
-
-  #awards .description, .education .description {
-    width: 83%;
-    display: inline-block;
-    background: #eee;
-    margin-bottom: 10px;
-    position: relative;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-  }
-
-  #awards .year, .education .year {
-    width: 14%;
-    background: #fff;
-    font-weight: 700;
-    display: inline-block;
-  }
-
-  .interest, .skill {
-    color: #fff;
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 5px 10px;
-    background: #32475c;
-    position: relative;
-    font-size: .85em;
-  }
-
-
-#text-header .contact img {
-  width: 35px;
-  height: 32px;
+  background: url('../ress/mountedRess/background.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
-i {
-  margin-right: 7px;
+#photo {
+  text-align: center;
+}
+
+#text-header {
+  text-align: center;
+}
+
+/* Verhindert die Unterstreichung von Links (blauer Strich) */
+.contact a {
+  text-decoration: none !important;
+  border: none !important;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle; /* Gleiche Ausrichtung */
+}
+
+/* Style für die Icons als Bilder */
+.contact a img {
+  width: 35px;
+  height: 32px;
+  vertical-align: middle;
+  margin-bottom: 0;
+  border: none;
+}
+
+/* Styling für Job- und Work Experience-Bereiche */
+.job .clearfix {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.job .details {
+  width: 99%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.job .profession {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.job .highlights {
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+#awards .description, .education .description {
+  width: 83%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+#awards .year, .education .year {
+  width: 14%;
+  background: #fff;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.interest, .skill {
+  color: #fff;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #32475c;
+  position: relative;
+  font-size: .85em;
 }
 
 .p-4 {
@@ -89,10 +95,16 @@ p {
   margin-bottom: 0.5rem;
 }
 
+/* Testimonials Styling */
+.testimonials-section {
+  margin-top: 20px; /* Gleicher Abstand wie bei anderen Abschnitten */
+  padding: 0; /* Entferne unerwünschtes Padding */
+}
+
 .testimonials-card {
-  background: #eee;
+  background: #f8f9fa; /* Gleiche Hintergrundfarbe wie die anderen Abschnitte */
   border-radius: 5px;
   padding: 15px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: none; /* Entferne Schatten, falls es anders als die anderen Sektionen ist */
   margin-bottom: 15px;
 }

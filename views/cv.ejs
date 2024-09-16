@@ -13,17 +13,23 @@
         <div id="text-header">
           <h1><%=data.name %>
 
-            <% if(data.links.length) { %>
-              <div class="contact clearfix">
+            <!-- Links und Print-Icon als Bild -->
+            <div class="contact clearfix">
+              <!-- Print Icon (jetzt als Bild) -->
+              <a href="#" onclick="printPage()" class="contact-item-icon" title="Print">
+                <img src="/ress/pdf-file.png" alt="Print Icon" />
+              </a>
+
+              <% if(data.links.length) { %>
                 <% for(let link of data.links) { %>
                   <a href="<%=link.link %>" target="_blank">
                     <img src="<%=link.imagePath %>" id="<%=link.id %>" alt="image" />
                   </a>
                 <% } %>
-              </div>
-            <% } else { %>
-              <div>NO LINKS AVAILABLE</div>
-            <% } %>
+              <% } else { %>
+                <div>NO LINKS AVAILABLE</div>
+              <% } %>
+            </div>
 
             <br />
             <span><%=data.header %></span>
@@ -71,26 +77,26 @@
                       <div>NO WORK EXPERIENCE AVAILABLE</div>
                     <% } %>
 
-                    <!-- Testimonials Section (conditionally rendered) -->
-                    <% if (data.enableTestimonials && data.showTestimonialsInMain) { %>
-                    <div class="mt-5">
+                    <!-- Testimonials Section -->
+                    <div class="testimonials-section">
                       <h2><i class="fa fa-comments"></i> Testimonials</h2>
                       <% if (data.testimonials && data.testimonials.length) { %>
                         <div class="row">
                           <% data.testimonials.forEach(function(testimonial) { %>
                             <div class="col-md-12">
                               <div class="testimonials-card">
-                                <h4><%=testimonial.name %></h4>
-                                <h6 class="text-muted"><%=testimonial.title %></h6>
-                                <p><%=testimonial.text %></p>
+                                <h4><%= testimonial.name %></h4>
+                                <h6 class="text-muted"><%= testimonial.title %></h6>
+                                <p><%= testimonial.text %></p>
                               </div>
                             </div>
                           <% }); %>
                         </div>
+                      <% } else { %>
+                        <p>No Testimonials Available</p>
                       <% } %>
                     </div>
-                    <% } %>
-                    <!-- End of Testimonials Section (conditionally rendered) -->
+                    <!-- End of Testimonials Section -->
 
                   </div>
 
@@ -145,28 +151,6 @@
                       <% } else { %>
                         <div>NO INTERESTS AVAILABLE</div>
                       <% } %>
-
-                      <!-- Testimonials Section (conditionally rendered) -->
-                      <% if (data.enableTestimonials && !data.showTestimonialsInMain) { %>
-                      <div class="mt-5">
-                        <h2><i class="fa fa-comments"></i> Testimonials</h2>
-                        <% if (data.testimonials && data.testimonials.length) { %>
-                          <div class="row">
-                            <% data.testimonials.forEach(function(testimonial) { %>
-                              <div class="col-md-12">
-                                <div class="testimonials-card">
-                                  <h4><%=testimonial.name %></h4>
-                                  <h6 class="text-muted"><%=testimonial.title %></h6>
-                                  <p><%=testimonial.text %></p>
-                                </div>
-                              </div>
-                            <% }); %>
-                          </div>
-                        <% } %>
-                      </div>
-                      <% } %>
-                      <!-- End of Testimonials Section (conditionally rendered) -->
-
                     </div>
                   </div>
                 </div>
@@ -176,5 +160,12 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript Function for Print -->
+    <script>
+      function printPage() {
+        window.print();  // Trigger the browser's print dialog
+      }
+    </script>
   </body>
 </html>
