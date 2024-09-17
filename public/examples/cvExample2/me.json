@@ -1,151 +1,123 @@
 {
-    "enableTestimonials": true, 
-    "showTestimonialsInMain": false, 
-    "picture": "/ress/mountedRess/me.jpg",
-    "name": "Jonathan Smith",
-    "header": "Senior Web Developer",
-    "about": "Innovative, task-driven professional with 8+ years of experience in web design and development across diverse industries. Equipped with a record of success in consistently identifying and providing the technologies needs of companies through ingenious innovations. Proficient in developing databases, creating user interfaces, writing testing codes, troubleshooting simple/comples issues, and implmenting new features based on user feedback.", 
-    "mail": "jonathan@example3.com",
-    "interests": [
-        {
-            "title": "Sports",
-            "subentries": [
-                "Running",
-                "Basketball"
-            ]
-        },
-        {
-            "title": "Books",
-            "subentries": [
-                "Comics",
-                "Mangas"
-            ]
-
-        }
-    ],
-    "educations": [
-        {
-            "date": "2013 – 2017",
-            "desc1": "Master of Science in Informatics, University of My MIT",
-            "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
-        },
-        {
-            "date": "2011 – 2013",
-            "desc1": "Bachelor of Science in Informatics, University of My MIT",
-            "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
-        }
-    ],
-    "menus": [
-        {
-            "title": "Framework",
-            "subentries": [
-                "jQuery",
-                "SpringBoot",
-                "AngularJS"
-            ]
-        },
-        {
-            "title": "System",
-            "subentries": [
-                "Linux",
-                "AWS",
-                "CI"
-            ]
-
-        },
-        {
-            "title": "DB",
-            "subentries": [
-                "MariaDB",
-                "Oracle",
-                "MandoDB"
-            ]
-        },
-        {
-            "title": "Certificates",
-            "subentries": [
-                "Java EE",
-                "Java Beans"
-            ]
-        },
-        {
-            "title": "Languages",
-            "subentries": [
-                "Javascript",
-                "JAVA",
-                "C/C++/C#"
-            ]
-        }
-    ],
-    "links": [
-        
-        {
-            "imagePath": "/ress/mailicon.png",
-            "link": "mailto:test@test.com"
-        },
-        {
-            "imagePath": "/ress/github.png",
-            "link": "https://github.com"
-        },
-        {
-            "imagePath": "/ress/tryhackme_logo_icon_249349.png",
-            "link": "https://tryhackme.com"
-        },
-        {
-            "imagePath": "/ress/docker.png",
-            "link": "https://hub.docker.com"
-        },
-        {
-            "imagePath": "/ress/linkedin.png",
-            "link": "https://ch.linkedin.com"
-        },
-        {
-            "imagePath": "/ress/xing.png",
-            "link": "https://www.xing.com"
-        }
-    ],
-    "workexperiences": [
-        {
-        "date": "04/2015 - Present",
-        "title": "ClearWater Cloud Systems & Technologies",
-        "desc": "Java Developer",
-        "highlights": [
-            "Utilize Java EnterpriceJava Bean, Java EE and Apache Struts Webapplication",
-            "Enforce an innovative approach to improve the client web reporting",
-            "Supervise and lead a team of 10+ junior java developers"
-        ]
+  "enableTestimonials": true,
+  "showTestimonialsInMain": false,
+  "picture": "/ress/mountedRess/me.jpg",
+  "name": "Jonathan Smith",
+  "header": "Senior Web Developer",
+  "about": "Innovative, task-driven professional with 8+ years of experience in web design and development across diverse industries. Equipped with a record of success in consistently identifying and providing the technological needs of companies through ingenious innovations. Proficient in developing databases, creating user interfaces, writing testing codes, troubleshooting simple/complex issues, and implementing new features based on user feedback.",
+  "mail": "jonathan@example3.com",
+  "interests": [
+    {
+      "title": "Sports",
+      "subentries": ["Running", "Basketball"]
     },
     {
-        "date": "02/2011 – 03/2015",
-        "title": "Easy Stream International",
-        "desc": "Back-End Java Developer",
-        "highlights": [
-            "Took part in scheduled developent meeting to recommend relevant systems",
-            "Spearheaded the software product definition",
-            "Innovated the phone devices by developing of the new"        
-        ]
-    },
-    {
-        "date": "02/2007 – 01/2011",
-        "title": "SwipeWire Inc.",
-        "desc": "Assistent Systems Engineer",
-        "highlights": [
-            "Aided in overseeing the transition of the commerce API to microservices",
-            "Coordinated the the experienced Systems Engineers and other professionals",
-            "Provided expert support in developing and implemting effective technicak solutions"
-        ]
+      "title": "Books",
+      "subentries": ["Comics", "Mangas"]
     }
-],
-    "testimonials": [
-  {
-    "name": "John Doe",
-    "text": "This is the best service I've ever used!",
-    "title": "CEO at Example Inc."
-  },
-  {
-    "name": "Jane Smith",
-    "text": "Highly recommended for anyone looking for great quality!",
-    "title": "Marketing Manager at ABC Corp."
-  }
-]
+  ],
+  "educations": [
+    {
+      "date": "2013 – 2017",
+      "desc1": "Master of Science in Informatics, University of My MIT",
+      "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
+    },
+    {
+      "date": "2011 – 2013",
+      "desc1": "Bachelor of Science in Informatics, University of My MIT",
+      "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
+    }
+  ],
+  "menus": [
+    {
+      "title": "Framework",
+      "subentries": ["jQuery", "SpringBoot", "AngularJS"]
+    },
+    {
+      "title": "System",
+      "subentries": ["Linux", "AWS", "CI"]
+    },
+    {
+      "title": "DB",
+      "subentries": ["MariaDB", "Oracle", "MongoDB"]
+    },
+    {
+      "title": "Certificates",
+      "subentries": ["Java EE", "Java Beans"]
+    },
+    {
+      "title": "Languages",
+      "subentries": ["Javascript", "JAVA", "C/C++/C#"]
+    }
+  ],
+  "links": [
+    {
+      "imagePath": "/ress/mailicon.png",
+      "link": "mailto:test@test.com"
+    },
+    {
+      "imagePath": "/ress/github.png",
+      "link": "https://github.com"
+    },
+    {
+      "imagePath": "/ress/tryhackme_logo_icon_249349.png",
+      "link": "https://tryhackme.com"
+    },
+    {
+      "imagePath": "/ress/docker.png",
+      "link": "https://hub.docker.com"
+    },
+    {
+      "imagePath": "/ress/linkedin.png",
+      "link": "https://ch.linkedin.com"
+    },
+    {
+      "imagePath": "/ress/xing.png",
+      "link": "https://www.xing.com"
+    }
+  ],
+  "workexperiences": [
+    {
+      "date": "04/2015 - Present",
+      "title": "ClearWater Cloud Systems & Technologies",
+      "desc": "Java Developer",
+      "highlights": [
+        "Utilized Java Enterprise, Java Bean, Java EE, and Apache Struts Web application",
+        "Enforced an innovative approach to improve the client web reporting",
+        "Supervised and led a team of 10+ junior java developers"
+      ]
+    },
+    {
+      "date": "02/2011 – 03/2015",
+      "title": "Easy Stream International",
+      "desc": "Back-End Java Developer",
+      "highlights": [
+        "Took part in scheduled development meetings to recommend relevant systems",
+        "Spearheaded the software product definition",
+        "Innovated phone devices by developing new software"
+      ]
+    },
+    {
+      "date": "02/2007 – 01/2011",
+      "title": "SwipeWire Inc.",
+      "desc": "Assistant Systems Engineer",
+      "highlights": [
+        "Aided in overseeing the transition of the commerce API to microservices",
+        "Coordinated with experienced Systems Engineers and other professionals",
+        "Provided expert support in developing and implementing effective technical solutions"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "text": "This is the best service I've ever used!",
+      "title": "CEO at Example Inc."
+    },
+    {
+      "name": "Jane Smith",
+      "text": "Highly recommended for anyone looking for great quality!",
+      "title": "Marketing Manager at ABC Corp."
+    }
+  ]
 }

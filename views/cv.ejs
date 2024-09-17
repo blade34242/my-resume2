@@ -75,8 +75,9 @@
                       <div>NO WORK EXPERIENCE AVAILABLE</div>
                     <% } %>
 
-                    <!-- Testimonials Section -->
-                    <div class="testimonials-section">
+                    <!-- Testimonials Section (Main Section) -->
+                    <% if (data.enableTestimonials && data.showTestimonialsInMain) { %>
+                    <div class="testimonials-section mt-5">
                       <h2><i class="fa fa-comments"></i> Testimonials</h2>
                       <% if (data.testimonials && data.testimonials.length) { %>
                         <div class="row">
@@ -94,6 +95,7 @@
                         <p>No Testimonials Available</p>
                       <% } %>
                     </div>
+                    <% } %>
                     <!-- End of Testimonials Section -->
 
                   </div>
@@ -149,6 +151,28 @@
                       <% } else { %>
                         <div>NO INTERESTS AVAILABLE</div>
                       <% } %>
+
+                      <!-- Testimonials Section (Sidebar Section) -->
+                      <% if (data.enableTestimonials && !data.showTestimonialsInMain) { %>
+                      <div class="mt-5">
+                        <h2><i class="fa fa-comments"></i> Testimonials</h2>
+                        <% if (data.testimonials && data.testimonials.length) { %>
+                          <div class="row">
+                            <% data.testimonials.forEach(function(testimonial) { %>
+                              <div class="col-md-12">
+                                <div class="testimonials-card">
+                                  <h4><%=testimonial.name %></h4>
+                                  <h6 class="text-muted"><%=testimonial.title %></h6>
+                                  <p><%=testimonial.text %></p>
+                                </div>
+                              </div>
+                            <% }); %>
+                          </div>
+                        <% } %>
+                      </div>
+                      <% } %>
+                      <!-- End of Testimonials Section -->
+
                     </div>
                   </div>
                 </div>
