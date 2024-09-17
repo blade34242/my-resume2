@@ -144,6 +144,8 @@ docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/
 
 <!-- CHANGELOG -->
 ## Changelog
+###  3.5 - Major Bugfix and Logging Improvement
+- Enhanced logging with log4js
 
 ###  3.4 - New Features
 - Added new config enableTestimonials and showTestimonialsInMain
