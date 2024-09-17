@@ -1,4 +1,6 @@
 {
+    "enableTestimonials": true, 
+    "showTestimonialsInMain": false, 
     "picture": "/ress/mountedRess/me.jpg",
     "name": "Jonathan Smith",
     "header": "Senior Web Developer",
@@ -133,5 +135,17 @@
             "Provided expert support in developing and implemting effective technicak solutions"
         ]
     }
+],
+    "testimonials": [
+  {
+    "name": "John Doe",
+    "text": "This is the best service I've ever used!",
+    "title": "CEO at Example Inc."
+  },
+  {
+    "name": "Jane Smith",
+    "text": "Highly recommended for anyone looking for great quality!",
+    "title": "Marketing Manager at ABC Corp."
+  }
 ]
 }

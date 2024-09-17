@@ -1,4 +1,6 @@
 {
+    "enableTestimonials": true, 
+    "showTestimonialsInMain": true, 
     "picture": "/ress/mountedRess/me.png",
     "name": "Homer J. Simpson",
     "header": "Award-winning nuclear safety inspector",
@@ -29,7 +31,19 @@
             "desc2": "HS Diploma College Prep"
         }
     ],
-    "menus": [
+    "menus": [,
+    "testimonials": [
+  {
+    "name": "John Doe",
+    "text": "This is the best service I've ever used!",
+    "title": "CEO at Example Inc."
+  },
+  {
+    "name": "Jane Smith",
+    "text": "Highly recommended for anyone looking for great quality!",
+    "title": "Marketing Manager at ABC Corp."
+  }
+]
         {
             "title": "Beer",
             "subentries": [
@@ -154,5 +168,17 @@
             "Deliberated at length before rescuing man trapped beneath mountain avalanche."
         ]
     }   
+],
+    "testimonials": [
+  {
+    "name": "John Doe",
+    "text": "This is the best service I've ever used!",
+    "title": "CEO at Example Inc."
+  },
+  {
+    "name": "Jane Smith",
+    "text": "Highly recommended for anyone looking for great quality!",
+    "title": "Marketing Manager at ABC Corp."
+  }
 ]
 }
