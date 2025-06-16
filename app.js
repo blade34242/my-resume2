@@ -8,12 +8,13 @@ const log4js = require("log4js");
 const fs = require('fs');
 const fse = require('fs-extra');  // fs-extra für das Kopieren des gesamten Verzeichnisses
 
-console.log("Environment variable 'example' is set to:", process.env.example);
+const exampleEnv = process.env.EXAMPLE || process.env.example;
+console.log("Environment variable 'EXAMPLE' is set to:", exampleEnv);
 var example;
-if (process.env.example == 1) {
+if (exampleEnv == 1) {
   example = "cvExample1";
   logger.info("Selected example: cvExample1");
-} else if (process.env.example == 2) {
+} else if (exampleEnv == 2) {
   example = "cvExample2";
   logger.info("Selected example: cvExample2");
 } else {
