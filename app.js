@@ -116,15 +116,15 @@ app.use("/fonts", express.static(__dirname + "/node_modules/font-awesome/fonts")
 
 app.use(log4js.connectLogger(logger, { level: "info" }));
 
-// Routen
-app.use(homeRoute);
-
 // Request Logging
 app.use((req, res, next) => {
   console.log(`Incoming request: ${req.method} ${req.url}`);
   logger.info(`Received ${req.method} request for ${req.url}`);
   next();
 });
+
+// Routen
+app.use(homeRoute);
 
 // Server starten
 app.listen(5555, () => {
