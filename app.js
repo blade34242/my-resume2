@@ -127,7 +127,8 @@ app.use((req, res, next) => {
 });
 
 // Server starten
-app.listen(5555, () => {
-  console.log("Server is listening on port 5555");
-  logger.info("Server started and is listening on port 5555");
+const PORT = process.env.PORT || 5555;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+  logger.info(`Server started and is listening on port ${PORT}`);
 });
