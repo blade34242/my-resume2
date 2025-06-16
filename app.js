@@ -66,7 +66,11 @@ fs.access(path.join(dest, file_json), fs.constants.F_OK, (err) => {
         return;
       }
 
-      logger.info(`File 'me.json' content: ${data}`);  // Logge den Inhalt der Datei vor dem Parsen
+      if (logger.level.levelStr === 'debug') {
+        logger.debug(`File 'me.json' content: ${data}`);
+      } else {
+        logger.info("File 'me.json' read successfully.");
+      }
 
       let obj;
       try {
@@ -74,7 +78,10 @@ fs.access(path.join(dest, file_json), fs.constants.F_OK, (err) => {
         console.log("File 'me.json' parsed successfully.");
         logger.info("File 'me.json' parsed successfully.");
       } catch (parseError) {
-        logger.error("Error parsing JSON file. Content:", data);
+        logger.error("Error parsing JSON file.");
+        if (logger.level.levelStr === 'debug') {
+          logger.debug(`Content: ${data}`);
+        }
         logger.error("Parsing error:", parseError);
         console.log("Error parsing JSON file:", parseError);
         return;
