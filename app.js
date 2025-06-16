@@ -1,8 +1,9 @@
 // app.js
 const express = require("express");
 const path = require("path");
+const bodyParser = require("body-parser");
 const rootDir = require("./utils/path");
-const { logger } = require('./utils/logger');
+const { logger, readLog } = require('./utils/logger');
 const log4js = require("log4js");
 const fs = require('fs');
 const fse = require('fs-extra');  // fs-extra für das Kopieren des gesamten Verzeichnisses
