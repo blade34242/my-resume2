@@ -1,19 +1,19 @@
 // app.js
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 const rootDir = require("./utils/path");
-const { logger, readLog } = require('./utils/logger');
+const { logger } = require('./utils/logger');
 const log4js = require("log4js");
 const fs = require('fs');
 const fse = require('fs-extra');  // fs-extra für das Kopieren des gesamten Verzeichnisses
 
-console.log("Environment variable 'example' is set to:", process.env.example);
+const exampleEnv = process.env.EXAMPLE || process.env.example;
+console.log("Environment variable 'EXAMPLE' is set to:", exampleEnv);
 var example;
-if (process.env.example == 1) {
+if (exampleEnv == 1) {
   example = "cvExample1";
   logger.info("Selected example: cvExample1");
-} else if (process.env.example == 2) {
+} else if (exampleEnv == 2) {
   example = "cvExample2";
   logger.info("Selected example: cvExample2");
 } else {
@@ -127,7 +127,8 @@ app.use((req, res, next) => {
 });
 
 // Server starten
-app.listen(5555, () => {
-  console.log("Server is listening on port 5555");
-  logger.info("Server started and is listening on port 5555");
+const PORT = process.env.PORT || 5555;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+  logger.info(`Server started and is listening on port ${PORT}`);
 });

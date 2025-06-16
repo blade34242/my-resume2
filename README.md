@@ -104,9 +104,12 @@ docker pull blade34242/my-resume2:latest
 You can run examples from the demos using:
 
 ```sh
-docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest   
+docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest
 docker run --name DevResume -p 8003:5555 -e example=2 -d blade34242/my-resume2:latest
 ```
+
+By default the application listens on port `5555`. You can change this by
+setting the `PORT` environment variable when starting the container.
 
 To start with your own resume, follow these steps:
 
