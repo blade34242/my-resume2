@@ -4,12 +4,10 @@ const path = require('path');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    const pwd = path.join(__dirname, '../public/ress/mountedRess/me.json');
 
-    fs.readFile(pwd, 'utf8', (err, data) => {
-        if (err) {
-            return next(err);
-        }
+    const pwd = path.join(__dirname, '../public/ress/mountedRess/me.json');
+    var obj = JSON.parse(fs.readFileSync(pwd, 'utf8'));
+
 
         let obj;
         try {
