@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/',(req,res,next) => {
 
-    pwd =  path.join(__dirname,'../public/ress/mountedRess/me.json');
+    const pwd = path.join(__dirname, '../public/ress/mountedRess/me.json');
     var obj = JSON.parse(fs.readFileSync(pwd, 'utf8'));
 
     const viewsData = {
