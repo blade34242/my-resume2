@@ -195,6 +195,13 @@ Optional badge (replace `OWNER/REPO`):
 
 <!-- CHANGELOG -->
 ## Changelog
+###  4.0 - Modernize + CI/CD
+- Node 22 base image, reproducible Docker builds, non-root run
+- PORT env support; unified `example` env
+- Basic me.json validation with clear error messages
+- ESLint setup and Node CI workflow
+- Docker publish workflow (push `latest` on main, semver tags on releases)
+
 ###  3.5 - Major Bugfix and Logging Improvement
 - Enhanced logging with log4js
 
