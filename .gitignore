@@ -7,4 +7,6 @@ npm-debug.log*
 .server.pid
 .dev-server.log
 AGENT.md
-
+public/ress/mountedRess/
+public/examples/cvExampleMe/
+.docker_cids*

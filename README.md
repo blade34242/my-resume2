@@ -182,12 +182,22 @@ Setup for Docker Hub publishing:
    - `IMAGE_NAME`: e.g. `yourname/my-resume2`
 3. Push to `main` to publish `:latest`, or create a tag like `v1.2.3` to publish a versioned tag.
 
-Optional badge (replace `OWNER/REPO`):
+Badges:
 
-```
-![Node CI](https://github.com/OWNER/REPO/actions/workflows/node-ci.yml/badge.svg)
-![Docker Publish](https://github.com/OWNER/REPO/actions/workflows/docker-publish.yml/badge.svg)
-```
+[![Node CI](https://github.com/blade34242/my-resume2/actions/workflows/node-ci.yml/badge.svg)](https://github.com/blade34242/my-resume2/actions/workflows/node-ci.yml)
+[![Docker Publish](https://github.com/blade34242/my-resume2/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/blade34242/my-resume2/actions/workflows/docker-publish.yml)
+
+#### Releases
+
+- Create a semver tag to publish a versioned Docker image, e.g.:
+
+  ```sh
+  git tag v4.0.2 && git push origin v4.0.2
+  ```
+
+- Expected Docker tags:
+  - `latest` on pushes to `main`
+  - `v4.0.2` on the tag push (replace with your version)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
