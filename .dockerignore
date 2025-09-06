@@ -1,7 +1,9 @@
-npm-debug.log
 node_modules
-Dockerfile
-.dockerignore
+npm-debug.log*
+.DS_Store
+.git
+.gitignore
+.server.log
+.server.pid
 logs
-public/examples/cvExampleMe
-images
+

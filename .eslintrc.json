@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es2022": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "error",
+    "semi": ["error", "always"]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "public/",
+    "images/",
+    "logs/"
+  ]
+}
+

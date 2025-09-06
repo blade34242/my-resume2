@@ -1,5 +1,5 @@
 const log4js = require("log4js");
-const fs = require('fs')
+const fs = require('fs');
 log4js.configure({
   appenders: {
     "stdout" : { type: "stdout" },
@@ -10,4 +10,3 @@ log4js.configure({
   }
 });
 exports.logger = log4js.getLogger();
-

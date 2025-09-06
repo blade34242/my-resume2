@@ -1,19 +1,19 @@
 // app.js
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 const rootDir = require("./utils/path");
 const { logger, readLog } = require('./utils/logger');
 const log4js = require("log4js");
 const fs = require('fs');
-const fse = require('fs-extra');  // fs-extra für das Kopieren des gesamten Verzeichnisses
+const fse = require('fs-extra');  // fs-extra for copying entire directories
 
-console.log("Environment variable 'example' is set to:", process.env.example);
-var example;
-if (process.env.example == 1) {
+const EXAMPLE_ENV = process.env.example || process.env.EXAMPLE;
+console.log("Environment variable 'example' is set to:", EXAMPLE_ENV);
+let example;
+if (EXAMPLE_ENV == 1) {
   example = "cvExample1";
   logger.info("Selected example: cvExample1");
-} else if (process.env.example == 2) {
+} else if (EXAMPLE_ENV == 2) {
   example = "cvExample2";
   logger.info("Selected example: cvExample2");
 } else {
@@ -103,6 +103,7 @@ fs.access(path.join(dest, file_json), fs.constants.F_OK, (err) => {
 const homeRoute = require("./routes/home");
 
 const app = express();
+const PORT = Number(process.env.PORT) || 5555;
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -110,14 +111,28 @@ app.set("views", "views");
 // Static Files
 app.use(express.static(path.join(rootDir, "public")));
 app.use("/css", express.static(path.join(rootDir, "node_modules/bootstrap/dist/css")));
-app.use("/js", express.static(path.join(rootDir, "node_modules/bootstrap/dist/js")));
 app.use("/fa", express.static(__dirname + "/node_modules/font-awesome/css"));
 app.use("/fonts", express.static(__dirname + "/node_modules/font-awesome/fonts"));
 
 app.use(log4js.connectLogger(logger, { level: "info" }));
 
+// Health check
+// (health endpoint removed by request)
+
 // Routen
 app.use(homeRoute);
+
+// 404 handler
+app.use((req, res) => {
+  logger.warn(`Not found: ${req.method} ${req.url}`);
+  res.status(404).send('Not Found');
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+  logger.error('Unhandled error', err);
+  res.status(500).send('Internal Server Error');
+});
 
 // Request Logging
 app.use((req, res, next) => {
@@ -127,7 +142,25 @@ app.use((req, res, next) => {
 });
 
 // Server starten
-app.listen(5555, () => {
-  console.log("Server is listening on port 5555");
-  logger.info("Server started and is listening on port 5555");
+const server = app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+  logger.info(`Server started and is listening on port ${PORT}`);
 });
+
+// Graceful shutdown
+const shutdown = (signal) => {
+  console.log(`\nReceived ${signal}. Shutting down gracefully...`);
+  logger.info(`Received ${signal}. Shutting down.`);
+  server.close(() => {
+    logger.info('HTTP server closed.');
+    process.exit(0);
+  });
+  // Force exit if not closed in time
+  setTimeout(() => {
+    logger.error('Force exit after timeout.');
+    process.exit(1);
+  }, 10000).unref();
+};
+
+process.on('SIGINT', () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM'));

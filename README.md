@@ -75,7 +75,7 @@ This is a NodeJS application that exposes a resume. I was inspired by the design
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.ejs&label=EJS)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.express&label=Express)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.log4js&label=log4js)
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.path&label=path)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fblade34242%2Fmy-resume2%2Fmain%2Fpackage.json&query=%24.dependencies.fs-extra&label=fs-extra)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,11 +101,11 @@ Pull with:
 docker pull blade34242/my-resume2:latest 
 ```
 
-You can run examples from the demos using:
+You can run examples from the demos using (mapped to local ports):
 
 ```sh
-docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest   
-docker run --name DevResume -p 8003:5555 -e example=2 -d blade34242/my-resume2:latest
+docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest
+docker run --name DevResume -p 8002:5555 -e example=2 -d blade34242/my-resume2:latest
 ```
 
 To start with your own resume, follow these steps:
@@ -115,7 +115,9 @@ To start with your own resume, follow these steps:
 2. Run the following command and add your mount path:
 
 ```sh
-docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
+docker run --name MyResume -p 8003:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/public/ress/mountedRess -d blade34242/my-resume2:latest
+
+Adjusting port: set `-e PORT=<port>` if you want the container to listen on a different internal port, and update the `-p <host>:<container>` mapping accordingly.
 ```
 
 3. Customize your icons and images as described in the instructions.
@@ -136,7 +138,56 @@ docker run --name MyResume -p 8022:5555 -v <MY_MOUNT_PATH_LOCAL>:/home/node/app/
    npm install
    ```
 
-3. Customize the `me.json` in `<public/ress/mountedRess>`, add your image as `me.jpg` and background as `background.jpg`.
+3. Start the app:
+
+   ```sh
+   npm start
+   ```
+
+   The app listens on env `PORT` (default `5555`).
+
+4. Customize the `me.json` in `<public/ress/mountedRess>`, add your image as `me.jpg` and background as `background.jpg`.
+
+Env configuration:
+
+- `PORT`: Port the app listens on (default `5555`). Example: `PORT=8080 npm start`
+- `example`: Selects built-in data on first run: `1` for `cvExample1`, `2` for `cvExample2`. Example: `example=2 npm start`
+
+Required fields in `me.json` (basic validation):
+
+- Strings: `picture`, `name`, `header`, `about`
+- Arrays: `links`, `workexperiences`, `menus`, `educations`, `interests`
+
+#### Node version
+
+This project runs on Node 20+ (tested on Node 22). If you use `nvm`:
+
+```sh
+nvm install 22 && nvm use 22
+```
+
+### CI/CD (GitHub Actions)
+
+Two workflows are included in `.github/workflows/`:
+
+- `Node CI`: Installs dependencies and runs lint on pushes/PRs to `main`.
+- `Docker Publish`: Builds and pushes the Docker image on pushes to `main` and tags (`v*.*.*`).
+
+Setup for Docker Hub publishing:
+
+1. Create a repository on Docker Hub, e.g. `yourname/my-resume2`.
+2. In your GitHub repo Settings → Secrets and variables → Actions, add:
+   - `DOCKERHUB_USERNAME`: your Docker Hub username
+   - `DOCKERHUB_TOKEN`: a Docker Hub Access Token
+   - `IMAGE_NAME`: e.g. `yourname/my-resume2`
+3. Push to `main` to publish `:latest`, or create a tag like `v1.2.3` to publish a versioned tag.
+
+Optional badge (replace `OWNER/REPO`):
+
+```
+![Node CI](https://github.com/OWNER/REPO/actions/workflows/node-ci.yml/badge.svg)
+![Docker Publish](https://github.com/OWNER/REPO/actions/workflows/docker-publish.yml/badge.svg)
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
