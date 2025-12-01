@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%=data.name %></title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="/fa/font-awesome.css" rel="stylesheet" type="text/css">
-    </head>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= data.header || 'Resume' %>">
+  <meta name="theme-color" content="#0f172a">
+  <title><%= data.name %> — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="/fa/font-awesome.css" rel="stylesheet" type="text/css">
+  <% const theme = data.theme || {}; %>
+  <style>
+    :root {
+      --bg: <%= theme.bg || '#0b1324' %>;
+      --bg-2: <%= theme.bg2 || '#0f172a' %>;
+      --card: <%= theme.card || 'rgba(255, 255, 255, 0.04)' %>;
+      --border: <%= theme.border || 'rgba(255, 255, 255, 0.08)' %>;
+      --text: <%= theme.text || '#e5e7eb' %>;
+      --muted: <%= theme.muted || '#cbd5e1' %>;
+      --accent: <%= theme.accent || '#0ea5e9' %>;
+      --accent-2: <%= theme.accent2 || '#f59e0b' %>;
+    }
+  </style>
+</head>

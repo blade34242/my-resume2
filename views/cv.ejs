@@ -1,193 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../views/partials/head.html'); %>
+  <%- include('../views/partials/head.html'); %>
 
-  <body>
-    <!-- Page Content -->
-    <div class="container">
-      <div class="card border-0 shadow my-5">
-        <!-- Foto -->
-        <div id="photo">
-          <img src="<%=data.picture %>" alt="Foto" />
+  <body class="resume-body">
+    <%
+      const normalizeSkill = (item) => {
+        if (typeof item === 'string') {
+          return { name: item, level: null, recent: false };
+        }
+        return {
+          name: item?.name || item?.title || item?.skill || '',
+          level: item?.level || item?.proficiency || null,
+          recent: Boolean(item?.recent)
+        };
+      };
+      const levelToPercent = (lvl) => {
+        if (!lvl) return 80;
+        const map = { beginner: 30, junior: 45, intermediate: 60, advanced: 75, senior: 85, expert: 95 };
+        const key = String(lvl).toLowerCase();
+        if (map[key]) return map[key];
+        const num = Number(lvl);
+        if (!Number.isNaN(num)) return Math.max(15, Math.min(100, num));
+        return 80;
+      };
+    %>
+    <div class="bg-gradient"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-avatar">
+          <img src="<%= data.picture %>" alt="<%= data.name %> portrait" />
         </div>
-        <div id="text-header">
-          <h1><%=data.name %>
-
-            <!-- Links und Print-Icon als Bild -->
-            <div class="contact clearfix">
-              <!-- Print Icon (jetzt als Bild) -->
-              <a href="#" onclick="printPage()" class="contact-item-icon" title="Print">
-                <img src="/ress/pdf-file.png" alt="Print Icon" />
-              </a>
-
-              <% if(data.links.length) { %>
-                <% for(let link of data.links) { %>
-                  <a href="<%=link.link %>" target="_blank">
-                    <img src="<%=link.imagePath %>" id="<%=link.id %>" alt="image" />
-                  </a>
-                <% } %>
-              <% } else { %>
-                <div>NO LINKS AVAILABLE</div>
-              <% } %>
-            </div>
-            <span><%=data.header %></span>
-          </h1>
-        </div>
-        <hr />
-        <div class="card-body p-4">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="row">
-                  <div class="col-md-8">
-                    <h2><i class="fa fa-user"></i> About</h2>
-                    <p><%=data.about %></p>
-
-                    <h2><i class="fa fa-suitcase"></i> Work Experience</h2>
-                    <% if(data.workexperiences.length) { %>
-                      <% for(let workexperience of data.workexperiences) { %>
-                        <div class="job clearfix">
-                          <div class="row">
-                            <div class="details">
-                              <div class="where"></div>
-                              <div class="year"><%=workexperience.date %></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="job-details col-xs-11">
-                              <div class="profession"><%=workexperience.title %></div>
-                              <div class="description">
-                                <%=workexperience.desc %>
-                                <% if(workexperience.highlights.length) { %>
-                                  <div class="highlights">Highlights</div>
-                                  <ul class="list-group">
-                                    <% for(let highlight of workexperience.highlights) { %>
-                                      <li class="list-group-item"><%=highlight%></li>
-                                    <% } %>
-                                  </ul>
-                                <% } %>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      <% } %>
-                    <% } else { %>
-                      <div>NO WORK EXPERIENCE AVAILABLE</div>
-                    <% } %>
-
-                    <!-- Testimonials Section (Main Section) -->
-                    <% if (data.enableTestimonials && data.showTestimonialsInMain) { %>
-                    <div class="testimonials-section mt-5">
-                      <h2><i class="fa fa-comments"></i> Testimonials</h2>
-                      <% if (data.testimonials && data.testimonials.length) { %>
-                        <div class="row">
-                          <% data.testimonials.forEach(function(testimonial) { %>
-                            <div class="col-md-12">
-                              <div class="testimonials-card">
-                                <h4><%= testimonial.name %></h4>
-                                <h6 class="text-muted"><%= testimonial.title %></h6>
-                                <p><%= testimonial.text %></p>
-                              </div>
-                            </div>
-                          <% }); %>
-                        </div>
-                      <% } else { %>
-                        <p>No Testimonials Available</p>
-                      <% } %>
-                    </div>
-                    <% } %>
-                    <!-- End of Testimonials Section -->
-
-                  </div>
-
-                  <div class="col-md-4">
-                    <h2><i class="fa fa-list"></i> Skills</h2>
-                    <% if(data.menus.length) { %>
-                      <% for(let menu of data.menus) { %>
-                        <div class="skills clearfix">
-                          <div class="item-skills"><%=menu.title %></div>
-                          <div class="col-sm-offset-1 col-sm-12 clearfix">
-                            <% for(let detail of menu.subentries) { %>
-                              <span class="skill badge"><%=detail %></span>
-                            <% } %>
-                          </div>
-                        </div>
-                      <% } %>
-                    <% } else { %>
-                      <div>NO SKILLS AVAILABLE</div>
-                    <% } %>
-
-                    <h2><i class="fa fa-graduation-cap"></i> Education</h2>
-                    <% if(data.educations.length) { %>
-                      <% for(let education of data.educations) { %>
-                        <div class="clearfix">
-                          <div class="education">
-                            <div class="year pull-left"><%=education.date %></div>
-                            <div class="description pull-right">
-                              <h4><%=education.desc1 %></h4>
-                              <p><%=education.desc2 %></p>
-                            </div>
-                          </div>
-                        </div>
-                      <% } %>
-                    <% } else { %>
-                      <div>NO EDUCATION AVAILABLE</div>
-                    <% } %>
-
-                    <div class="box">
-                      <h2><i class="fa fa-heart"></i> Interests</h2>
-                      <% if(data.interests.length) { %>
-                        <% for(let interest of data.interests) { %>
-                          <div class="interests clearfix"></div>
-                          <div class="item-interests"><%=interest.title %></div>
-                          <div class="col-sm-offset-1 col-sm-12 clearfix">
-                            <% if(interest.subentries) { %>
-                              <% for(let subentry of interest.subentries) { %>
-                                <span class="interest badge"><%=subentry %></span>
-                              <% } %>
-                            <% } %>
-                          </div>
-                        <% } %>
-                      <% } else { %>
-                        <div>NO INTERESTS AVAILABLE</div>
-                      <% } %>
-
-                      <!-- Testimonials Section (Sidebar Section) -->
-                      <% if (data.enableTestimonials && !data.showTestimonialsInMain) { %>
-                      <div class="mt-5">
-                        <h2><i class="fa fa-comments"></i> Testimonials</h2>
-                        <% if (data.testimonials && data.testimonials.length) { %>
-                          <div class="row">
-                            <% data.testimonials.forEach(function(testimonial) { %>
-                              <div class="col-md-12">
-                                <div class="testimonials-card">
-                                  <h4><%=testimonial.name %></h4>
-                                  <h6 class="text-muted"><%=testimonial.title %></h6>
-                                  <p><%=testimonial.text %></p>
-                                </div>
-                              </div>
-                            <% }); %>
-                          </div>
-                        <% } %>
-                      </div>
-                      <% } %>
-                      <!-- End of Testimonials Section -->
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div>
+          <p class="eyebrow">Resume</p>
+          <span class="brand-name"><%= data.name %></span>
         </div>
       </div>
+      <nav class="top-nav">
+        <a href="#experience">Experience</a>
+        <% if (data.projects && data.projects.length) { %>
+          <a href="#projects">Projects</a>
+        <% } %>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <% if (data.enableTestimonials) { %>
+          <a href="#testimonials">Testimonials</a>
+        <% } %>
+        <a href="#interests">Interests</a>
+      </nav>
+      <div class="top-actions">
+        <% if (data.mail) { %>
+          <a class="ghost-btn" href="mailto:<%= data.mail %>">Contact</a>
+        <% } %>
+        <button class="ghost-btn" id="theme-toggle" type="button">Theme</button>
+        <button class="solid-btn" type="button" onclick="printPage()">PDF</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero" id="hero">
+        <div class="hero-card glass">
+          <div class="hero-photo">
+            <img src="<%= data.picture %>" alt="<%= data.name %> portrait" />
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">Available for opportunities</p>
+            <h1><%= data.name %></h1>
+            <p class="role"><%= data.header %></p>
+            <p class="about-text"><%= data.about %></p>
+            <div class="cta-row">
+              <% if (data.mail) { %>
+                <a class="solid-btn" href="mailto:<%= data.mail %>">Email me</a>
+              <% } %>
+              <button class="ghost-btn" type="button" onclick="printPage()">Save as PDF</button>
+            </div>
+            <% if (data.links && data.links.length) { %>
+              <div class="social-row">
+                <% data.links.forEach(function(link, idx) { %>
+                  <a class="chip" href="<%= link.link %>" target="_blank" rel="noopener">
+                    <img src="<%= link.imagePath %>" alt="<%= link.label || ('Link ' + (idx + 1)) %>" />
+                  </a>
+                <% }); %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Career</p>
+            <h2>Experience</h2>
+          </div>
+          <span class="section-sub">Impactful roles & highlights</span>
+        </div>
+        <% if (data.workexperiences && data.workexperiences.length) { %>
+          <ol class="timeline">
+            <% data.workexperiences.forEach(function(work) { %>
+              <li class="timeline-item glass">
+                <div class="timeline-meta">
+                  <span class="pill"><%= work.date %></span>
+                </div>
+                <div class="timeline-body">
+                  <p class="meta">
+                    <%= work.title %>
+                    <% if (work.location) { %> · <%= work.location %><% } %>
+                  </p>
+                  <h3>
+                    <% if (work.link) { %>
+                      <a href="<%= work.link %>" target="_blank" rel="noopener"><%= work.desc %></a>
+                    <% } else { %>
+                      <%= work.desc %>
+                    <% } %>
+                  </h3>
+                  <% if (work.tech && work.tech.length) { %>
+                    <div class="chips tight">
+                      <% work.tech.forEach(function(t) { %>
+                        <span class="chip chip-ghost"><%= t %></span>
+                      <% }); %>
+                    </div>
+                  <% } %>
+                  <% if (work.highlights && work.highlights.length) { %>
+                    <ul class="bullets">
+                      <% work.highlights.forEach(function(point) { %>
+                        <li><%= point %></li>
+                      <% }); %>
+                    </ul>
+                  <% } %>
+                  <% if (work.metrics && work.metrics.length) { %>
+                    <div class="chips tight metrics">
+                      <% work.metrics.forEach(function(m) { %>
+                        <span class="chip chip-accent"><%= m %></span>
+                      <% }); %>
+                    </div>
+                  <% } %>
+                </div>
+              </li>
+            <% }); %>
+          </ol>
+        <% } else { %>
+          <p class="muted">No work experience available.</p>
+        <% } %>
+      </section>
+
+      <% if (data.projects && data.projects.length) { %>
+        <section id="projects" class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Showreel</p>
+              <h2>Projects</h2>
+            </div>
+            <span class="section-sub">Selected work with stack highlights</span>
+          </div>
+          <div class="projects-grid">
+            <% data.projects.forEach(function(project) { %>
+              <article class="project-card glass">
+                <% if (project.thumb) { %>
+                  <div class="project-thumb">
+                    <img src="<%= project.thumb %>" alt="<%= project.name %> thumbnail" />
+                  </div>
+                <% } %>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <% if (project.year) { %>
+                      <span class="pill pill-ghost"><%= project.year %></span>
+                    <% } %>
+                    <% if (project.type) { %>
+                      <span class="pill pill-ghost"><%= project.type %></span>
+                    <% } %>
+                  </div>
+                  <h3><%= project.name %></h3>
+                  <p class="muted"><%= project.summary %></p>
+                  <% if (project.stack && project.stack.length) { %>
+                    <div class="chips">
+                      <% project.stack.forEach(function(tech) { %>
+                        <span class="chip chip-ghost"><%= tech %></span>
+                      <% }); %>
+                    </div>
+                  <% } %>
+                  <div class="project-links">
+                    <% if (project.link) { %>
+                      <a class="ghost-btn small-btn" href="<%= project.link %>" target="_blank" rel="noopener">Live</a>
+                    <% } %>
+                    <% if (project.repo) { %>
+                      <a class="ghost-btn small-btn" href="<%= project.repo %>" target="_blank" rel="noopener">Repo</a>
+                    <% } %>
+                  </div>
+                </div>
+              </article>
+            <% }); %>
+          </div>
+        </section>
+      <% } %>
+
+      <section id="skills" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Strengths</p>
+            <h2>Skills</h2>
+          </div>
+          <span class="section-sub">Tools, stacks, specialties</span>
+        </div>
+        <% if (data.menus && data.menus.length) { %>
+          <div class="card-grid">
+            <% data.menus.forEach(function(menu) { %>
+              <div class="card glass skill-card">
+                <div class="card-header">
+                  <span class="pill pill-ghost"><%= menu.title %></span>
+                </div>
+                <div class="skill-list">
+                  <% (menu.subentries || []).forEach(function(detail) { 
+                    const skill = normalizeSkill(detail);
+                  %>
+                    <div class="skill-row <%= skill.recent ? 'skill-recent' : '' %>">
+                      <div class="skill-label"><%= skill.name %></div>
+                      <% if (skill.level) { %>
+                        <div class="skill-level">
+                          <div class="skill-level-fill" style="width:<%= levelToPercent(skill.level) %>%"></div>
+                        </div>
+                      <% } %>
+                    </div>
+                  <% }); %>
+                </div>
+              </div>
+            <% }); %>
+          </div>
+        <% } else { %>
+          <p class="muted">No skills available.</p>
+        <% } %>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Learning</p>
+            <h2>Education</h2>
+          </div>
+        </div>
+        <% if (data.educations && data.educations.length) { %>
+          <div class="card-grid two-col">
+            <% data.educations.forEach(function(education) { %>
+              <div class="card glass">
+                <span class="pill"><%= education.date %></span>
+                <h3><%= education.desc1 %></h3>
+                <p class="muted"><%= education.desc2 %></p>
+              </div>
+            <% }); %>
+          </div>
+        <% } else { %>
+          <p class="muted">No education available.</p>
+        <% } %>
+      </section>
+
+      <% if (data.enableTestimonials) { %>
+        <section id="testimonials" class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Feedback</p>
+              <h2>Testimonials</h2>
+            </div>
+          </div>
+          <% if (data.testimonials && data.testimonials.length) { %>
+            <div class="testimonial-slider" data-count="<%= data.testimonials.length %>" data-visible="2">
+              <div class="testimonial-track">
+                <% data.testimonials.forEach(function(testimonial) { %>
+                  <div class="testimonial-card glass">
+                    <% if (testimonial.avatar) { %>
+                      <div class="testimonial-avatar">
+                        <img src="<%= testimonial.avatar %>" alt="<%= testimonial.name %> avatar">
+                      </div>
+                    <% } %>
+                    <h3><%= testimonial.name %></h3>
+                    <p class="muted"><%= testimonial.title %></p>
+                    <p class="quote">“<%= testimonial.text %>”</p>
+                    <% if (testimonial.rating) { %>
+                      <div class="rating">
+                        <% for (let i = 0; i < Number(testimonial.rating || 0); i++) { %>
+                          <span>★</span>
+                        <% } %>
+                      </div>
+                    <% } %>
+                  </div>
+                <% }); %>
+              </div>
+              <div class="testimonial-dots"></div>
+            </div>
+          <% } else { %>
+            <p class="muted">No testimonials available.</p>
+          <% } %>
+        </section>
+      <% } %>
+
+      <section id="interests" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Beyond work</p>
+            <h2>Interests</h2>
+          </div>
+        </div>
+        <% if (data.interests && data.interests.length) { %>
+          <div class="chips interest-chips">
+            <% data.interests.forEach(function(interest) { %>
+              <div class="interest-block glass">
+                <span class="pill pill-ghost"><%= interest.title %></span>
+                <% if (interest.subentries && interest.subentries.length) { %>
+                  <div class="subchips">
+                    <% interest.subentries.forEach(function(item) { %>
+                      <span class="chip chip-ghost"><%= item %></span>
+                    <% }); %>
+                  </div>
+                <% } %>
+              </div>
+            <% }); %>
+          </div>
+        <% } else { %>
+          <p class="muted">No interests available.</p>
+        <% } %>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-actions">
+        <% if (data.mail) { %>
+          <a class="solid-btn" href="mailto:<%= data.mail %>">Let's talk</a>
+        <% } %>
+        <button class="ghost-btn" type="button" onclick="printPage()">Print / Save</button>
+      </div>
+      <p class="muted small">Built with Express + EJS — content pulled from JSON.</p>
+    </footer>
+
+    <div class="contact-strip glass">
+      <% if (data.mail) { %>
+        <a href="mailto:<%= data.mail %>">Email</a>
+      <% } %>
+      <% if (data.phone) { %>
+        <a href="tel:<%= data.phone %>">Call</a>
+      <% } %>
+      <% if (data.calendly) { %>
+        <a href="<%= data.calendly %>" target="_blank" rel="noopener">Meet</a>
+      <% } %>
+      <button type="button" onclick="printPage()">PDF</button>
     </div>
 
-    <!-- JavaScript Function for Print -->
     <script>
       function printPage() {
-        window.print();  // Trigger the browser's print dialog
+        window.print();
       }
+
+      // Theme toggle with localStorage persistence
+      (function () {
+        const toggleBtn = document.getElementById('theme-toggle');
+        const saved = localStorage.getItem('resume-theme');
+        // Default to light unless user explicitly chose dark
+        if (saved !== 'dark') {
+          document.body.classList.add('theme-light');
+        }
+        const updateLabel = () => {
+          if (toggleBtn) toggleBtn.textContent = document.body.classList.contains('theme-light') ? 'Dark' : 'Light';
+        };
+        updateLabel();
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('theme-light');
+            const mode = document.body.classList.contains('theme-light') ? 'light' : 'dark';
+            localStorage.setItem('resume-theme', mode);
+            updateLabel();
+          });
+        }
+      })();
+
+      // Testimonials slider (simple fade)
+      (() => {
+        const slider = document.querySelector('.testimonial-slider');
+        if (!slider) return;
+        const track = slider.querySelector('.testimonial-track');
+        const cards = Array.from(track?.children || []);
+        if (!cards.length) return;
+        const dotsWrap = slider.querySelector('.testimonial-dots');
+        const gap = parseFloat(getComputedStyle(track).gap || 0);
+
+        let visible = window.matchMedia('(min-width: 768px)').matches ? 2 : 1;
+        slider.dataset.visible = String(visible);
+
+        const buildDots = () => {
+          dotsWrap.innerHTML = '';
+          const slides = Math.ceil(cards.length / visible);
+          for (let i = 0; i < slides; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'dot' + (i === 0 ? ' active' : '');
+            btn.dataset.index = String(i);
+            btn.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+            btn.addEventListener('click', () => slideTo(i));
+            dotsWrap.appendChild(btn);
+          }
+        };
+
+        let idx = 0;
+        const slideTo = (i) => {
+          const slides = Math.ceil(cards.length / visible);
+          idx = Math.max(0, Math.min(i, slides - 1));
+          const cardWidth = cards[0].getBoundingClientRect().width;
+          const offset = idx * (cardWidth + gap);
+          track.style.transform = `translateX(-${offset}px)`;
+          dotsWrap.querySelectorAll('.dot').forEach((d, n) => d.classList.toggle('active', n === idx));
+        };
+
+        buildDots();
+        slideTo(0);
+
+        let timer = null;
+        const start = () => {
+          const slides = Math.ceil(cards.length / visible);
+          if (slides <= 1) return;
+          timer = setInterval(() => {
+            const slidesNow = Math.ceil(cards.length / visible);
+            slideTo((idx + 1) % slidesNow);
+          }, 5500);
+        };
+        const stop = () => timer && clearInterval(timer);
+
+        start();
+        slider.addEventListener('mouseenter', stop);
+        slider.addEventListener('mouseleave', start);
+
+        window.addEventListener('resize', () => {
+          const nextVisible = window.matchMedia('(min-width: 768px)').matches ? 2 : 1;
+          if (nextVisible !== visible) {
+            visible = nextVisible;
+            slider.dataset.visible = String(visible);
+            buildDots();
+            slideTo(0);
+            stop();
+            start();
+          } else {
+            slideTo(idx);
+          }
+        });
+      })();
     </script>
   </body>
 </html>

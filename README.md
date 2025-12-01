@@ -33,6 +33,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -58,6 +60,13 @@
 
 This is a NodeJS application that exposes a resume. I was inspired by the design of other resume projects (see Acknowledgments) and created my own version.
 
+### Highlights
+- Modern hero/timeline layout with projects grid, skill levels, and testimonial slider
+- Light/dark theme toggle (persisted) and themed cards/headings
+- JSON-driven content for links (with labels/icons), projects, skills (levels/recent), testimonials (avatars/ratings), and interests
+- Three built-in examples selectable via `example=1|2|3` plus Dockerized runtime
+- Bundled fresh light/dark screenshots in `docs/`
+
 ### Demo Screenshots
 
 [![Product Screenshot][product-homer3]](https://homer.gellert-innovation.com)
@@ -68,6 +77,19 @@ This is a NodeJS application that exposes a resume. I was inspired by the design
 [![Product Screenshot][product-homerMobile]](https://homer.gellert-innovation.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SCREENSHOTS -->
+## Screenshots
+
+Light  
+![Light example](docs/example1-light.png)
+
+Dark  
+![Dark example](docs/example1-dark.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 ### Built With
 
@@ -106,6 +128,7 @@ You can run examples from the demos using (mapped to local ports):
 ```sh
 docker run --name HomerResume -p 8001:5555 -e example=1 -d blade34242/my-resume2:latest
 docker run --name DevResume -p 8002:5555 -e example=2 -d blade34242/my-resume2:latest
+docker run --name AlexResume -p 8003:5555 -e example=3 -d blade34242/my-resume2:latest
 ```
 
 To start with your own resume, follow these steps:
@@ -205,6 +228,11 @@ Badges:
 
 <!-- CHANGELOG -->
 ## Changelog
+###  4.1 - UI Refresh + Content
+- Light/dark theme toggle with improved heading contrast and themed cards
+- Projects grid, skill levels, testimonial carousel, contact strip
+- New example 3 (`example=3`), extra links (Portfolio/CV), and refreshed screenshots in `docs/`
+
 ###  4.0 - Modernize + CI/CD
 - Node 22 base image, reproducible Docker builds, non-root run
 - PORT env support; unified `example` env

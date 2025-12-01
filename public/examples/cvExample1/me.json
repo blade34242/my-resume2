@@ -1,166 +1,250 @@
 {
-    "enableTestimonials": "true",
-    "showTestimonialsInMain": "true",
-    "picture": "/ress/mountedRess/me.png",
-    "name": "Homer J. Simpson",
-    "header": "Award-winning nuclear safety inspector",
-    "about": "Award-winning nuclear safety inspector with 20 years' experience, plus additional skills as policechief, bartender, astronaut, snowplow driver, sports team mascot, and uhhh, is that a box of donuts? MmmmmmDOOOnuts!",
-    "mail": "chunkylover53@aol.com",
-    "interests": [
-        {
-            "title": "Eating",
-            "subentries": [
-                "Donuts",
-                "PIZZA"
-            ]
-        },
-        {
-            "title": "BEER!!"
-        }
-    ],
-    "educations": [
-        {
-            "date": "2013 – 2017",
-            "desc1": "Nuclear Power Plant",
-            "desc2": "Nuclear Power Plant, Nuclear Power Plant"
-        },
-        {
-            "date": "2011 – 2013",
-            "desc1": "Springfield High School, Springfield, USA",
-            "desc2": "HS Diploma College Prep"
-        }
-    ],
-    "menus": [
-        {
-            "title": "Beer",
-            "subentries": [
-                "Duff Blue Ribbon!",
-                "Duff Holo Beer",
-                "Duff Old Fashioned",
-                "Duff Tinsel",
-                "AngularJS"
-            ]
-        },
-        {
-            "title": "System",
-            "subentries": [
-                "Docker",
-                "Octopus",
-                "Linux",
-                "AWS",
-                "CI",
-                "Synology",
-                "Debian"
-            ]
-        },
-        {
-            "title": "Softwares",
-            "subentries": [
-                "Synology",
-                "Nextcloud",
-                "Arris"
-            ]
-        },
-        {
-            "title": "Certificates",
-            "subentries": [
-                "nuclear master",
-                "bartender",
-                "astronaut"
-            ]
-        },
-        {
-            "title": "Languages",
-            "subentries": [
-                "Python",
-                "Javascript",
-                "JAVA",
-                "C/C++/C#"
-            ]
-        }
-    ],
-    "links": [
-        {
-            "imagePath": "/ress/mailicon.png",
-            "link": "mailto:chunkylover53@aol.com"
-        },
-        {
-            "imagePath": "/ress/github.png",
-            "link": "https://github.com"
-        },
-        {
-            "imagePath": "/ress/tryhackme_logo_icon_249349.png",
-            "link": "https://tryhackme.com"
-        },
-        {
-            "imagePath": "/ress/docker.png",
-            "link": "https://hub.docker.com"
-        },
-        {
-            "imagePath": "/ress/linkedin.png",
-            "link": "https://ch.linkedin.com"
-        },
-        {
-            "imagePath": "/ress/xing.png",
-            "link": "https://www.xing.com"
-        }
-    ],
-    "workexperiences": [
-        {
-            "date": "1989 to Present",
-            "title": "Springfield Nuclear Power Plant, Springfield, USA",
-            "desc": "Safety Inspector",
-            "highlights": [
-                "Strengthened safety procedures that resulted in 75% fewer accidents on days I was absent.",
-                "Pioneered workplace stress-reduction methods that worked for at least one employee."
-            ]
-        },
-        {
-            "date": "2002 to 2002",
-            "title": "City of Springfield, Springfield, USA",
-            "desc": "Chief of Police",
-            "highlights": [
-                "Broke up weasel-selling ring",
-                "Secured community support in almost-successful effort to expel organized crime from city."
-            ]
-        },
-        {
-            "date": "2001 to 2001",
-            "title": "Moe's Tavern and Homer's Hunting Club, Springfield, USA",
-            "desc": "Bartender",
-            "highlights": [
-                "Engaged patrons in witty, whimsical, avuncular dialog covering topics such as the arts, philosophy, politics, and spectator sports.",
-                "Launched remodeling project that led to 100% reduction in clientele (including myself)."
-            ]
-        },
-        {
-            "date": "1994 to 1994",
-            "title": "National Aeronautics and Space Administration (NASA), Cape Canaveral, FL",
-            "desc": "Astronaut",
-            "highlights": [
-                "Averted in-flight disaster by forcing giant ants out of cockpit during space shuttle mission."
-            ]
-        },
-        {
-            "date": "1992 to 1993",
-            "title": "Mr. Plow, Springfield, USA",
-            "desc": "Owner, Chief Marketing Officer, and Chief Driver for Snow-Plowing Business",
-            "highlights": [
-                "Boosted business 15% by executing late-night TV marketing campaign targeting homeowners who were too wasted to shovel their driveways.",
-                "Deliberated at length before rescuing man trapped beneath mountain avalanche."
-            ]
-        }
-    ],
-    "testimonials": [
-        {
-            "name": "John Doe",
-            "text": "This is the best service I've ever used!",
-            "title": "CEO at Example Inc."
-        },
-        {
-            "name": "Jane Smith",
-            "text": "Highly recommended for anyone looking for great quality!",
-            "title": "Marketing Manager at ABC Corp."
-        }
-    ]
+  "enableTestimonials": "true",
+  "showTestimonialsInMain": "true",
+  "theme": {
+    "bg": "#0b1324",
+    "bg2": "#101828",
+    "accent": "#22c55e",
+    "accent2": "#a855f7",
+    "muted": "#cbd5e1"
+  },
+  "picture": "/ress/mountedRess/me.png",
+  "name": "Homer J. Simpson",
+  "header": "Award-winning nuclear safety inspector",
+  "about": "Award-winning nuclear safety inspector with 20 years' experience, plus additional skills as policechief, bartender, astronaut, snowplow driver, sports team mascot, and uhhh, is that a box of donuts? MmmmmmDOOOnuts!",
+  "mail": "chunkylover53@aol.com",
+  "phone": "+1-555-123-4567",
+  "calendly": "https://calendly.com/homer-simpson/coffee",
+  "interests": [
+    {
+      "title": "Eating",
+      "subentries": [
+        "Donuts",
+        "PIZZA"
+      ]
+    },
+    {
+      "title": "BEER!!"
+    }
+  ],
+  "educations": [
+    {
+      "date": "2013 – 2017",
+      "desc1": "Nuclear Power Plant",
+      "desc2": "Nuclear Power Plant, Nuclear Power Plant"
+    },
+    {
+      "date": "2011 – 2013",
+      "desc1": "Springfield High School, Springfield, USA",
+      "desc2": "HS Diploma College Prep"
+    }
+  ],
+  "menus": [
+    {
+      "title": "Beer",
+      "subentries": [
+        { "name": "Duff Blue Ribbon!", "level": "expert", "recent": true },
+        { "name": "Duff Holo Beer", "level": "advanced" },
+        { "name": "Duff Old Fashioned", "level": "intermediate" },
+        "Duff Tinsel",
+        { "name": "AngularJS", "level": "advanced" }
+      ]
+    },
+    {
+      "title": "System",
+      "subentries": [
+        { "name": "Docker", "level": "expert", "recent": true },
+        { "name": "Octopus", "level": "advanced" },
+        { "name": "Linux", "level": "expert" },
+        { "name": "AWS", "level": "advanced" },
+        { "name": "CI", "level": "advanced" },
+        "Synology",
+        "Debian"
+      ]
+    },
+    {
+      "title": "Softwares",
+      "subentries": [
+        "Synology",
+        "Nextcloud",
+        "Arris"
+      ]
+    },
+    {
+      "title": "Certificates",
+      "subentries": [
+        { "name": "nuclear master", "level": "expert" },
+        { "name": "bartender", "level": "advanced" },
+        { "name": "astronaut", "level": "advanced" }
+      ]
+    },
+    {
+      "title": "Languages",
+      "subentries": [
+        { "name": "Python", "level": "expert", "recent": true },
+        { "name": "Javascript", "level": "advanced", "recent": true },
+        { "name": "JAVA", "level": "advanced" },
+        "C/C++/C#"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "imagePath": "/ress/mailicon.png",
+      "link": "mailto:chunkylover53@aol.com",
+      "label": "Email"
+    },
+    {
+      "imagePath": "/ress/github.png",
+      "link": "https://github.com",
+      "label": "GitHub"
+    },
+    {
+      "imagePath": "/ress/tryhackme_logo_icon_249349.png",
+      "link": "https://tryhackme.com",
+      "label": "TryHackMe"
+    },
+    {
+      "imagePath": "/ress/docker.png",
+      "link": "https://hub.docker.com",
+      "label": "Docker Hub"
+    },
+    {
+      "imagePath": "/ress/linkedin.png",
+      "link": "https://ch.linkedin.com",
+      "label": "LinkedIn"
+    },
+    {
+      "imagePath": "/ress/xing.png",
+      "link": "https://www.xing.com",
+      "label": "Xing"
+    },
+    {
+      "imagePath": "/ress/linkedin.png",
+      "link": "https://portfolio.example.com",
+      "label": "Portfolio"
+    },
+    {
+      "imagePath": "/ress/pdf-file.png",
+      "link": "https://example.com/cv.pdf",
+      "label": "Download CV"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Springfield Safety Dashboard",
+      "summary": "Built a real-time incident dashboard with predictive risk scoring for the power plant ops team.",
+      "stack": ["Node", "Express", "D3", "Redis", "Docker"],
+      "link": "https://example.com/safety",
+      "repo": "https://github.com/blade34242/safety-dashboard",
+      "year": "2024",
+      "type": "Internal SaaS",
+      "thumb": "/ress/mountedRess/background.jpeg"
+    },
+    {
+      "name": "Donut Delivery",
+      "summary": "Geo-routed donut delivery app with live tracking and SMS alerts for Moe's Tavern.",
+      "stack": ["Next.js", "Supabase", "Twilio", "Mapbox"],
+      "link": "https://example.com/donuts",
+      "repo": "https://github.com/blade34242/donut-delivery",
+      "year": "2023",
+      "type": "Product",
+      "thumb": "/ress/mountedRess/me.png"
+    }
+  ],
+  "workexperiences": [
+    {
+      "date": "1989 to Present",
+      "title": "Springfield Nuclear Power Plant, Springfield, USA",
+      "desc": "Safety Inspector",
+      "location": "Springfield, USA",
+      "link": "https://example.com/powerplant",
+      "tech": ["Safety Ops", "Auditing", "Automation"],
+      "highlights": [
+        "Strengthened safety procedures that resulted in 75% fewer accidents on days I was absent.",
+        "Pioneered workplace stress-reduction methods that worked for at least one employee."
+      ],
+      "metrics": [
+        "Incident -25%",
+        "Uptime 99.9%"
+      ]
+    },
+    {
+      "date": "2002 to 2002",
+      "title": "City of Springfield, Springfield, USA",
+      "desc": "Chief of Police",
+      "location": "Springfield, USA",
+      "tech": ["Crisis Mgmt", "Negotiation"],
+      "highlights": [
+        "Broke up weasel-selling ring",
+        "Secured community support in almost-successful effort to expel organized crime from city."
+      ],
+      "metrics": [
+        "Crime -8%"
+      ]
+    },
+    {
+      "date": "2001 to 2001",
+      "title": "Moe's Tavern and Homer's Hunting Club, Springfield, USA",
+      "desc": "Bartender",
+      "location": "Springfield, USA",
+      "highlights": [
+        "Engaged patrons in witty, whimsical, avuncular dialog covering topics such as the arts, philosophy, politics, and spectator sports.",
+        "Launched remodeling project that led to 100% reduction in clientele (including myself)."
+      ]
+    },
+    {
+      "date": "1994 to 1994",
+      "title": "National Aeronautics and Space Administration (NASA), Cape Canaveral, FL",
+      "desc": "Astronaut",
+      "location": "Cape Canaveral, FL",
+      "highlights": [
+        "Averted in-flight disaster by forcing giant ants out of cockpit during space shuttle mission."
+      ]
+    },
+    {
+      "date": "1992 to 1993",
+      "title": "Mr. Plow, Springfield, USA",
+      "desc": "Owner, Chief Marketing Officer, and Chief Driver for Snow-Plowing Business",
+      "location": "Springfield, USA",
+      "tech": ["Marketing", "Logistics"],
+      "highlights": [
+        "Boosted business 15% by executing late-night TV marketing campaign targeting homeowners who were too wasted to shovel their driveways.",
+        "Deliberated at length before rescuing man trapped beneath mountain avalanche."
+      ],
+      "metrics": [
+        "+15% revenue"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "text": "This is the best service I've ever used!",
+      "title": "CEO at Example Inc.",
+      "avatar": "/ress/mountedRess/me.png",
+      "rating": 5
+    },
+    {
+      "name": "Jane Smith",
+      "text": "Highly recommended for anyone looking for great quality!",
+      "title": "Marketing Manager at ABC Corp.",
+      "avatar": "/ress/mountedRess/me.png",
+      "rating": 4
+    },
+    {
+      "name": "Mr. Burns",
+      "text": "Excellent safety oversight. Also, bring me donuts.",
+      "title": "Owner, Springfield Nuclear Power Plant",
+      "avatar": "/ress/mountedRess/me.png",
+      "rating": 4
+    },
+    {
+      "name": "Marge Simpson",
+      "text": "Homer’s dedication shines when it matters most.",
+      "title": "Support System",
+      "avatar": "/ress/mountedRess/me.png",
+      "rating": 5
+    }
+  ]
 }

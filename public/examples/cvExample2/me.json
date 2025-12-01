@@ -1,11 +1,20 @@
 {
   "enableTestimonials": true,
   "showTestimonialsInMain": false,
+  "theme": {
+    "bg": "#0c1220",
+    "bg2": "#11182c",
+    "accent": "#22d3ee",
+    "accent2": "#a855f7",
+    "muted": "#cbd5e1"
+  },
   "picture": "/ress/mountedRess/me.jpg",
   "name": "Jonathan Smith",
   "header": "Senior Web Developer",
-  "about": "Innovative, task-driven professional with 8+ years of experience in web design and development across diverse industries. Equipped with a record of success in consistently identifying and providing the technological needs of companies through ingenious innovations. Proficient in developing databases, creating user interfaces, writing testing codes, troubleshooting simple/complex issues, and implementing new features based on user feedback.",
+  "about": "Innovative, task-driven professional with 8+ years in web design and development across diverse industries. Strong record of identifying tech needs, shipping features, and hardening performance/security.",
   "mail": "jonathan@example3.com",
+  "phone": "+1-555-987-0000",
+  "calendly": "https://calendly.com/jonathan-dev/intro",
   "interests": [
     {
       "title": "Sports",
@@ -20,60 +29,118 @@
     {
       "date": "2013 – 2017",
       "desc1": "Master of Science in Informatics, University of My MIT",
-      "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
+      "desc2": "Focus: Software Engineering, Architecture, Quality, Web tech, Information security"
     },
     {
       "date": "2011 – 2013",
       "desc1": "Bachelor of Science in Informatics, University of My MIT",
-      "desc2": "Focus on Software-Engineering, Software-Architecture, Quality assurance, Web technologies, Information security"
+      "desc2": "Focus: Software Engineering, Architecture, Quality, Web tech, Information security"
     }
   ],
   "menus": [
     {
       "title": "Framework",
-      "subentries": ["jQuery", "SpringBoot", "AngularJS"]
+      "subentries": [
+        { "name": "React", "level": "advanced", "recent": true },
+        { "name": "Next.js", "level": "advanced", "recent": true },
+        { "name": "SpringBoot", "level": "advanced" },
+        { "name": "jQuery", "level": "senior" },
+        { "name": "AngularJS", "level": "advanced" }
+      ]
     },
     {
       "title": "System",
-      "subentries": ["Linux", "AWS", "CI"]
+      "subentries": [
+        { "name": "Linux", "level": "expert", "recent": true },
+        { "name": "AWS", "level": "advanced" },
+        { "name": "CI/CD", "level": "advanced", "recent": true }
+      ]
     },
     {
       "title": "DB",
-      "subentries": ["MariaDB", "Oracle", "MongoDB"]
+      "subentries": [
+        { "name": "PostgreSQL", "level": "advanced" },
+        { "name": "MariaDB", "level": "advanced" },
+        { "name": "MongoDB", "level": "advanced" }
+      ]
     },
     {
       "title": "Certificates",
-      "subentries": ["Java EE", "Java Beans"]
+      "subentries": [
+        { "name": "Java EE", "level": "advanced" },
+        { "name": "Java Beans", "level": "advanced" }
+      ]
     },
     {
       "title": "Languages",
-      "subentries": ["Javascript", "JAVA", "C/C++/C#"]
+      "subentries": [
+        { "name": "Javascript", "level": "expert", "recent": true },
+        { "name": "JAVA", "level": "advanced" },
+        { "name": "C/C++/C#", "level": "advanced" }
+      ]
     }
   ],
   "links": [
     {
       "imagePath": "/ress/mailicon.png",
-      "link": "mailto:test@test.com"
+      "link": "mailto:test@test.com",
+      "label": "Email"
     },
     {
       "imagePath": "/ress/github.png",
-      "link": "https://github.com"
+      "link": "https://github.com",
+      "label": "GitHub"
     },
     {
       "imagePath": "/ress/tryhackme_logo_icon_249349.png",
-      "link": "https://tryhackme.com"
+      "link": "https://tryhackme.com",
+      "label": "TryHackMe"
     },
     {
       "imagePath": "/ress/docker.png",
-      "link": "https://hub.docker.com"
+      "link": "https://hub.docker.com",
+      "label": "Docker Hub"
     },
     {
       "imagePath": "/ress/linkedin.png",
-      "link": "https://ch.linkedin.com"
+      "link": "https://ch.linkedin.com",
+      "label": "LinkedIn"
     },
     {
       "imagePath": "/ress/xing.png",
-      "link": "https://www.xing.com"
+      "link": "https://www.xing.com",
+      "label": "Xing"
+    },
+    {
+      "imagePath": "/ress/linkedin.png",
+      "link": "https://portfolio.example.com",
+      "label": "Portfolio"
+    },
+    {
+      "imagePath": "/ress/pdf-file.png",
+      "link": "https://example.com/cv.pdf",
+      "label": "Download CV"
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Revamp",
+      "summary": "Headless storefront with Next.js and GraphQL, shipping 18% faster checkout and +12% conversion.",
+      "stack": ["Next.js", "Tailwind", "GraphQL", "Stripe"],
+      "link": "https://example.com/shop",
+      "repo": "https://github.com/example/ecommerce",
+      "year": "2024",
+      "type": "Product",
+      "thumb": "/ress/mountedRess/background.jpeg"
+    },
+    {
+      "name": "Observability Kit",
+      "summary": "Self-hosted metrics/logs/alerts bundle with Terraform modules for small teams.",
+      "stack": ["Terraform", "Prometheus", "Grafana", "Loki"],
+      "repo": "https://github.com/example/obskit",
+      "year": "2023",
+      "type": "Open Source",
+      "thumb": "/ress/mountedRess/me.jpg"
     }
   ],
   "workexperiences": [
@@ -81,26 +148,39 @@
       "date": "04/2015 - Present",
       "title": "ClearWater Cloud Systems & Technologies",
       "desc": "Java Developer",
+      "location": "Remote",
+      "tech": ["Java EE", "Kubernetes", "Grafana"],
       "highlights": [
         "Utilized Java Enterprise, Java Bean, Java EE, and Apache Struts Web application",
         "Enforced an innovative approach to improve the client web reporting",
         "Supervised and led a team of 10+ junior java developers"
+      ],
+      "metrics": [
+        "+18% throughput",
+        "-22% incidents"
       ]
     },
     {
       "date": "02/2011 – 03/2015",
       "title": "Easy Stream International",
       "desc": "Back-End Java Developer",
+      "location": "Zurich, CH",
+      "tech": ["Java", "Microservices", "Oracle"],
       "highlights": [
         "Took part in scheduled development meetings to recommend relevant systems",
         "Spearheaded the software product definition",
         "Innovated phone devices by developing new software"
+      ],
+      "metrics": [
+        "API latency -30%"
       ]
     },
     {
       "date": "02/2007 – 01/2011",
       "title": "SwipeWire Inc.",
       "desc": "Assistant Systems Engineer",
+      "location": "Berlin, DE",
+      "tech": ["API Gateway", "CI/CD"],
       "highlights": [
         "Aided in overseeing the transition of the commerce API to microservices",
         "Coordinated with experienced Systems Engineers and other professionals",
@@ -112,12 +192,30 @@
     {
       "name": "John Doe",
       "text": "This is the best service I've ever used!",
-      "title": "CEO at Example Inc."
+      "title": "CEO at Example Inc.",
+      "avatar": "/ress/mountedRess/me.jpg",
+      "rating": 5
     },
     {
       "name": "Jane Smith",
       "text": "Highly recommended for anyone looking for great quality!",
-      "title": "Marketing Manager at ABC Corp."
+      "title": "Marketing Manager at ABC Corp.",
+      "avatar": "/ress/mountedRess/me.jpg",
+      "rating": 4
+    },
+    {
+      "name": "CTO, ClearWater",
+      "text": "Jonathan ships production-ready features with clean, testable code.",
+      "title": "CTO, ClearWater",
+      "avatar": "/ress/mountedRess/me.jpg",
+      "rating": 5
+    },
+    {
+      "name": "Team Lead",
+      "text": "Consistent on delivery and strong on mentorship.",
+      "title": "Lead Engineer",
+      "avatar": "/ress/mountedRess/me.jpg",
+      "rating": 4
     }
   ]
 }

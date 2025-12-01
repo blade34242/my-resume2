@@ -6,4 +6,5 @@ npm-debug.log*
 .server.log
 .server.pid
 logs
-
+public/examples/cvExampleMe
+public/ress/mountedRess

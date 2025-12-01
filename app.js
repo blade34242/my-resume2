@@ -2,7 +2,7 @@
 const express = require("express");
 const path = require("path");
 const rootDir = require("./utils/path");
-const { logger, readLog } = require('./utils/logger');
+const { logger } = require('./utils/logger');
 const log4js = require("log4js");
 const fs = require('fs');
 const fse = require('fs-extra');  // fs-extra for copying entire directories
@@ -16,6 +16,9 @@ if (EXAMPLE_ENV == 1) {
 } else if (EXAMPLE_ENV == 2) {
   example = "cvExample2";
   logger.info("Selected example: cvExample2");
+} else if (EXAMPLE_ENV == 3) {
+  example = "cvExampleMe";
+  logger.info("Selected example: cvExampleMe");
 } else {
   example = "cvExample1";
   logger.info("Default example selected: cvExample1");
@@ -25,7 +28,6 @@ var source = path.join(rootDir, "/public/examples", example);
 var dest = path.join(rootDir, "/public/ress/mountedRess");
 
 var file_json = "me.json";
-var file_background = "background.jpeg";
 
 // Prüfen, ob me.json im Ziel existiert
 fs.access(path.join(dest, file_json), fs.constants.F_OK, (err) => {
@@ -129,6 +131,7 @@ app.use((req, res) => {
 });
 
 // Error handler
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   logger.error('Unhandled error', err);
   res.status(500).send('Internal Server Error');
